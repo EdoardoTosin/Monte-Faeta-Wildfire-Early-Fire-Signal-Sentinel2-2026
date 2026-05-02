@@ -85,3 +85,7 @@ Due to sensor limitations:
 All processing was performed using Python with OpenEO and standard geospatial libraries.
 
 The workflow is reproducible using the same Sentinel-2 scene and AOI definition.
+
+## License
+
+- Images and analysis content are licensed under the [Creative Commons Attribution 4.0 International License](LICENSE).
