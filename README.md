@@ -8,12 +8,15 @@ This work does not determine ignition cause or exact ignition time. It only anal
 
 ## Data source
 
-- Satellite: Sentinel-2 (ESA Copernicus)
+- Satellite: Sentinel-2 (Copernicus Programme, ESA)
 - Product level: L2A (Bottom-of-Atmosphere reflectance)
 - Sensor: MSI (Multispectral Instrument)
 - Processing: OpenEO Python workflow
 - Spatial resolution: 10 m (bands resampled where required)
 - Study area: Monte Faeta, Tuscany, Italy
+
+All imagery and derived products are based on Copernicus Sentinel-2 data provided by the European Space Agency (ESA) through the Copernicus Data Space Ecosystem.
+© European Union / ESA, contains modified Copernicus Sentinel data (2026).
 
 ## Files description
 
@@ -21,11 +24,13 @@ This work does not determine ignition cause or exact ignition time. It only anal
 
 [aoi_monte-faeta_2026.geojson](data/aoi_monte-faeta_2026.geojson)
 
-This file defines the Area of Interest used for analysis.
+Defines the Area of Interest used for analysis.
 
 ### True colour composite
 
 ![monte-faeta_2026_true_color.png](outputs/figures/monte-faeta_2026_true_color.png)
+
+*Figure 1: True colour composite (B04, B03, B02). Copernicus Sentinel-2 data (2026), processed within this repository.*
 
 RGB composite using Sentinel-2 bands:
 
@@ -39,18 +44,16 @@ This image shows general land cover, smoke presence, and visible surface changes
 
 ![monte-faeta_2026_swir.png](outputs/figures/monte-faeta_2026_swir.png)
 
-False colour composite using:
+*Figure 2: SWIR false colour composite (B12, B8A, B04). Copernicus Sentinel-2 data (2026), processed within this repository.*
 
-- B12 (SWIR2)
-- B8A (NIR narrow)
-- B04 (red)
-
-Shortwave infrared is sensitive to heat and burned vegetation.  
+Shortwave infrared is sensitive to heat and burned vegetation.
 Bright or saturated pixels indicate strong thermal anomalies or fire-affected surfaces.
 
 ### Burn severity index
 
 ![monte-faeta_2026_nbr.png](outputs/figures/monte-faeta_2026_nbr.png)
+
+*Figure 3: Normalized Burn Ratio (NBR). Copernicus Sentinel-2 data (2026), processed within this repository.*
 
 The Normalized Burn Ratio (NBR) is used to detect burned or fire-affected vegetation:
 
@@ -63,8 +66,7 @@ Lower values indicate burned or heat-affected areas.
 1. Sentinel-2 L2A scene acquired for 29 April 2026
 2. AOI applied to extract study region
 3. Bands resampled to 10 m grid
-4. Spectral indices computed:
-   - NBR
+4. Spectral indices computed (NBR)
 5. RGB and SWIR composites generated
 6. Spatial analysis performed to identify strongest fire-related signal
 
